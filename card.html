@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Card Design</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f0f2f8;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 340px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* top header */
+    .card-header {
+      background: linear-gradient(135deg, #0077cc, #00a6ff);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* body */
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      color: #444;
+    }
+
+    .info img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* footer */
+    .card-footer {
+      border-top: 1px solid #eee;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fafafa;
+    }
+
+    .card-footer a,
+    .card-footer span {
+      font-size: 14px;
+      text-decoration: none;
+      color: #0077cc;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+
+    .card-footer span {
+      color: #333;
+      font-weight: normal;
+    }
+
+    .card-footer img {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- top heading area -->
+    <div class="card-header">
+      <h3>Holy Quran Memorization Complex - Male</h3>
+    </div>
+
+    <!-- middle info -->
+    <div class="card-body">
+      <div class="info">
+        <img src="./assets/images/icons/location.svg" alt="">
+        <strong>Al-Qunfudhah</strong>
+      </div>
+      <div class="info">
+        <img src="./assets/images/icons/time.svg" alt="">
+        <span>Working Hours</span>
+      </div>
+    </div>
+
+    <!-- bottom actions -->
+    <div class="card-footer">
+      <a href="#">
+        <img src="./assets/images/icons/map.svg" alt="">
+        Map Location
+      </a>
+      <span>
+        <img src="./assets/images/icons/activities.svg" alt="">
+        Activities
+      </span>
+    </div>
+  </div>
+
+</body>
+</html>
