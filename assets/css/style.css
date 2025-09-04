@@ -1505,6 +1505,11 @@ align-items: center;
   width: 32px;
 }
 
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    filter: invert(1);
+}
+
 
 
 
