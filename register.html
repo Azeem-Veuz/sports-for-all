@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Registration Form (English/Arabic)</title>
+
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- bootstrap-select CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+
+  <!-- Flag icons CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
+
+  <!-- intl-tel-input CSS (phone input with country code) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+
+  <!-- Bootstrap datepicker CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+
+  <!-- bootstrap-select-country CSS -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select-country@4.0.0/dist/css/bootstrap-select-country.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { padding: 20px; }
+    .demo-wrapper { max-width: 800px; margin: 0 auto; }
+    .form-group label { font-weight: bold; }
+    .terms-box { max-height: 300px; overflow-y: auto; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <h3>Registration Form نموذج التسجيل</h3>
+    <form id="regForm" class="form-horizontal">
+
+      <!-- Full name -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Full name<br><span>الإسم كامل</span></label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" maxlength="30" required>
+        </div>
+      </div>
+
+      <!-- ID number -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">ID number<br><span>رقم الهوية</span></label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" maxlength="15" required>
+        </div>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Date of Birth<br><span>تاريخ الميلاد</span></label>
+        <div class="col-sm-9">
+          <input type="text" id="dob" class="form-control" placeholder="YYYY-MM-DD" required>
+          <p class="help-block">Age / العمر: <strong id="ageDisplay">-</strong></p>
+        </div>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Gender<br><span>الجنس</span></label>
+        <div class="col-sm-9">
+          <select class="selectpicker form-control" title="Select gender" required>
+            <option value="Male" data-content="Male / ذكر">Male</option>
+            <option value="Female" data-content="Female / أنثى">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Email<br><span>البريد الإلكتروني</span></label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Phone number -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Phone number<br><span>رقم الجوال</span></label>
+        <div class="col-sm-9">
+          <input id="phone" type="tel" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Parent/Gardian phone number -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Guardian phone<br><span>رقم جوال ولي الأمر</span></label>
+        <div class="col-sm-9">
+          <input id="guardianPhone" type="tel" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Nationality (all countries with flags) -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Nationality<br><span>الجنسية</span></label>
+        <div class="col-sm-9">
+          <!-- NOTE: no title="" here so the selected country (default) will be shown -->
+          <select id="nationality"
+                  class="selectpicker countrypicker form-control"
+                  data-live-search="true"
+                  data-flag="true"
+                  data-default="SA"
+                  required>
+          </select>
+        </div>
+      </div>
+
+      <!-- City -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">City<br><span>المدينة</span></label>
+        <div class="col-sm-9">
+          <select class="selectpicker form-control" title="Select city" required>
+            <option value="Riyadh" selected>Riyadh / الرياض</option>
+            <option value="Jeddah">Jeddah / جدة</option>
+            <option value="Dammam">Dammam / الدمام</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Club -->
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Club<br><span>النادي</span></label>
+        <div class="col-sm-9">
+          <select class="selectpicker form-control" title="Select club" required>
+            <option disabled>-- To be shared later --</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Terms and conditions -->
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="termsChk" required>
+              Please read and accept the Terms and conditions<br>
+              <span>الرجاء الموافقة على الشروط والأحكام</span>
+            </label>
+            <br>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#termsModal">
+              View Terms / عرض الشروط
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <button type="submit" class="btn btn-primary">Submit إرسال</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Terms Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div>
+        <div class="modal-body">
+          <div class="terms-box">
+            <p>Here you put your terms and conditions in English and Arabic...</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close إغلاق</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS libs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-hijri/2.1.2/moment-hijri.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+  <!-- bootstrap-select-country JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select-country@4.0.0/dist/js/bootstrap-select-country.min.js"></script>
+
+  <script>
+    $(function(){
+      // 1) Initialize the countrypicker first — this populates the <select> with <option>s
+      $('#nationality').countrypicker();
+
+      // 2) Now initialize bootstrap-select for all selects (or refresh afterwards)
+      $('.selectpicker').selectpicker();
+
+      // ensure the nationality bootstrap-select is synced with the generated options
+      $('#nationality').selectpicker('refresh');
+
+      // Phone inputs with intl-tel-input
+      window.intlTelInput(document.querySelector("#phone"), {
+        initialCountry: "sa",
+        preferredCountries: ["sa", "us", "gb", "in", "eg"],
+        separateDialCode: true
+      });
+      window.intlTelInput(document.querySelector("#guardianPhone"), {
+        initialCountry: "sa",
+        preferredCountries: ["sa", "us", "gb", "in", "eg"],
+        separateDialCode: true
+      });
+
+      // Datepicker for DOB -> show age
+      $('#dob').datepicker({
+        format: "yyyy-mm-dd",
+        autoclose: true,
+        todayHighlight: true
+      }).on('changeDate', function(e){
+        var dob = moment(e.date);
+        var age = moment().diff(dob, 'years');
+        $('#ageDisplay').text(age);
+      });
+
+      // Form submit handler (demo only)
+      $('#regForm').on('submit', function(e){
+        e.preventDefault();
+        alert("Form submitted successfully!");
+      });
+    });
+  </script>
+</body>
+</html>
