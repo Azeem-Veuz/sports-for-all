@@ -14378,7 +14378,7 @@ ol.breadcrumb .breadcrumb-item a {
 }
 
 .btn {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: capitalize;
     -webkit-border-radius: 32px;
@@ -15458,20 +15458,17 @@ section.promo-sec .breadcrumb .breadcrumb-item.active {
     font-size: 16px
 }
 
-.footer .instagram-widget {
-    padding-left: 100px
+.instagram-widget img{
+height: 80px;
+border: 1px solid #fff;
+padding: 10px;
+border-radius: 10px;
 }
 
-@media (min-width:992px) and (max-width:1399.98px) {
-    .footer .instagram-widget {
-        padding-left: 45px
-    }
-}
-
-@media (max-width:991.98px) {
-    .footer .instagram-widget {
-        padding: 0
-    }
+.instagram-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .footer-widget .widget-title {
@@ -19379,5 +19376,25 @@ form.form.checkout-form input[type=checkbox] {
     display: flex;
 }
 
+.register-now{
+
+}
+
+.iti--separate-dial-code{
+    width: 100%;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    
+    border-color: none !important;
+}
+
+.account-form .btn{
+    width: 100%;
+}
+.bootstrap-select .dropdown-toggle:focus{
+    border: none !important;
+    outline: none !important;
+}
 
 

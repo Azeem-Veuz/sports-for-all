@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Registration Form (English/Arabic)</title>
+  <title>Registration Form</title>
 
   <!-- Bootstrap 3 CSS -->
   <link rel="stylesheet"
@@ -16,7 +16,7 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
 
-  <!-- intl-tel-input CSS (phone input with country code) -->
+  <!-- intl-tel-input CSS -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
 
@@ -28,7 +28,10 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-select-country@4.0.0/dist/css/bootstrap-select-country.min.css">
 
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="stylesheet" href="css/style.css">
   <style>
     body { padding: 20px; }
     .demo-wrapper { max-width: 800px; margin: 0 auto; }
@@ -37,13 +40,15 @@
   </style>
 </head>
 <body>
+
+  
   <div class="demo-wrapper">
-    <h3>Registration Form نموذج التسجيل</h3>
+    <h3>Registration Form</h3>
     <form id="regForm" class="form-horizontal">
 
       <!-- Full name -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Full name<br><span>الإسم كامل</span></label>
+        <label class="col-sm-3 control-label">Full name</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" maxlength="30" required>
         </div>
@@ -51,7 +56,7 @@
 
       <!-- ID number -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">ID number<br><span>رقم الهوية</span></label>
+        <label class="col-sm-3 control-label">ID number</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" maxlength="15" required>
         </div>
@@ -59,27 +64,27 @@
 
       <!-- Date of Birth -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Date of Birth<br><span>تاريخ الميلاد</span></label>
+        <label class="col-sm-3 control-label">Date of Birth</label>
         <div class="col-sm-9">
           <input type="text" id="dob" class="form-control" placeholder="YYYY-MM-DD" required>
-          <p class="help-block">Age / العمر: <strong id="ageDisplay">-</strong></p>
+          <p class="help-block">Age: <strong id="ageDisplay">-</strong></p>
         </div>
       </div>
 
       <!-- Gender -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Gender<br><span>الجنس</span></label>
+        <label class="col-sm-3 control-label">Gender</label>
         <div class="col-sm-9">
           <select class="selectpicker form-control" title="Select gender" required>
-            <option value="Male" data-content="Male / ذكر">Male</option>
-            <option value="Female" data-content="Female / أنثى">Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
           </select>
         </div>
       </div>
 
       <!-- Email -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Email<br><span>البريد الإلكتروني</span></label>
+        <label class="col-sm-3 control-label">Email</label>
         <div class="col-sm-9">
           <input type="email" class="form-control" required>
         </div>
@@ -87,25 +92,24 @@
 
       <!-- Phone number -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Phone number<br><span>رقم الجوال</span></label>
+        <label class="col-sm-3 control-label">Phone number</label>
         <div class="col-sm-9">
           <input id="phone" type="tel" class="form-control" required>
         </div>
       </div>
 
-      <!-- Parent/Gardian phone number -->
+      <!-- Guardian phone number -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Guardian phone<br><span>رقم جوال ولي الأمر</span></label>
+        <label class="col-sm-3 control-label">Guardian phone</label>
         <div class="col-sm-9">
           <input id="guardianPhone" type="tel" class="form-control" required>
         </div>
       </div>
 
-      <!-- Nationality (all countries with flags) -->
+      <!-- Nationality -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Nationality<br><span>الجنسية</span></label>
+        <label class="col-sm-3 control-label">Nationality</label>
         <div class="col-sm-9">
-          <!-- NOTE: no title="" here so the selected country (default) will be shown -->
           <select id="nationality"
                   class="selectpicker countrypicker form-control"
                   data-live-search="true"
@@ -118,19 +122,19 @@
 
       <!-- City -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">City<br><span>المدينة</span></label>
+        <label class="col-sm-3 control-label">City</label>
         <div class="col-sm-9">
           <select class="selectpicker form-control" title="Select city" required>
-            <option value="Riyadh" selected>Riyadh / الرياض</option>
-            <option value="Jeddah">Jeddah / جدة</option>
-            <option value="Dammam">Dammam / الدمام</option>
+            <option value="Riyadh" selected>Riyadh</option>
+            <option value="Jeddah">Jeddah</option>
+            <option value="Dammam">Dammam</option>
           </select>
         </div>
       </div>
 
       <!-- Club -->
       <div class="form-group">
-        <label class="col-sm-3 control-label">Club<br><span>النادي</span></label>
+        <label class="col-sm-3 control-label">Club</label>
         <div class="col-sm-9">
           <select class="selectpicker form-control" title="Select club" required>
             <option disabled>-- To be shared later --</option>
@@ -144,12 +148,11 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" id="termsChk" required>
-              Please read and accept the Terms and conditions<br>
-              <span>الرجاء الموافقة على الشروط والأحكام</span>
+              Please read and accept the Terms and conditions
             </label>
             <br>
             <button type="button" class="btn btn-link" data-toggle="modal" data-target="#termsModal">
-              View Terms / عرض الشروط
+              View Terms
             </button>
           </div>
         </div>
@@ -158,7 +161,7 @@
       <!-- Submit -->
       <div class="form-group">
         <div class="col-sm-offset-3 col-sm-9">
-          <button type="submit" class="btn btn-primary">Submit إرسال</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </form>
@@ -171,11 +174,11 @@
         <div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div>
         <div class="modal-body">
           <div class="terms-box">
-            <p>Here you put your terms and conditions in English and Arabic...</p>
+            <p>Here you put your terms and conditions in English...</p>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close إغلاق</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -189,19 +192,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-hijri/2.1.2/moment-hijri.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-
-  <!-- bootstrap-select-country JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select-country@4.0.0/dist/js/bootstrap-select-country.min.js"></script>
 
   <script>
     $(function(){
-      // 1) Initialize the countrypicker first — this populates the <select> with <option>s
+      // Initialize the country picker
       $('#nationality').countrypicker();
 
-      // 2) Now initialize bootstrap-select for all selects (or refresh afterwards)
+      // Initialize bootstrap-select
       $('.selectpicker').selectpicker();
-
-      // ensure the nationality bootstrap-select is synced with the generated options
       $('#nationality').selectpicker('refresh');
 
       // Phone inputs with intl-tel-input
@@ -227,7 +226,7 @@
         $('#ageDisplay').text(age);
       });
 
-      // Form submit handler (demo only)
+      // Form submit handler
       $('#regForm').on('submit', function(e){
         e.preventDefault();
         alert("Form submitted successfully!");
