@@ -19397,4 +19397,18 @@ form.form.checkout-form input[type=checkbox] {
     outline: none !important;
 }
 
+.form-control, input{
+    border: 1px solid #000;
+    height: 60px;
+}
+
+.bootstrap-select.form-control{
+    border: 1px solid #000;
+    height: 60px;
+
+}
+
+.sec-padding2{
+    padding: 70px 0 !important;
+}
 
