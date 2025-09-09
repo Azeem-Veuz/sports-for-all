@@ -34,6 +34,10 @@
          <span></span>
       </div>
    </div>
+   <!-- <div class="lang-toggle">
+  <button id="enBtn" type="button" class="btn active">EN</button>
+  <button id="arBtn" type="button" class="btn">AR</button>
+</div> -->
    <!-- Header Start -->
    <header class="header header-4">
 
@@ -80,6 +84,7 @@
                      </li>
                   </ul>
                </div>
+               
             </div>
          </div>
       </nav>
@@ -830,6 +835,52 @@
          this.style.display = "none"; // hide button
       });
    </script>
+
+   <script>
+  const enBtn = document.getElementById("enBtn");
+  const arBtn = document.getElementById("arBtn");
+
+  function switchLanguage(lang) {
+    // Toggle active button
+    enBtn.classList.toggle("active", lang === "en");
+    arBtn.classList.toggle("active", lang === "ar");
+
+    // Direction RTL/LTR
+    document.body.classList.toggle("rtl", lang === "ar");
+
+    // Update all elements with data-en / data-ar
+    document.querySelectorAll("[data-en]").forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+
+    // Update placeholders if defined
+    document.querySelectorAll("input[placeholder]").forEach(el => {
+      if (el.hasAttribute(`data-${lang}-ph`)) {
+        el.placeholder = el.getAttribute(`data-${lang}-ph`);
+      }
+    });
+
+    // Update select option texts
+    document.querySelectorAll("select option").forEach(opt => {
+      if (opt.hasAttribute(`data-${lang}`)) {
+        opt.textContent = opt.getAttribute(`data-${lang}`);
+      }
+    });
+
+    // Refresh bootstrap-select if plugin exists
+    if (typeof $ !== "undefined" && $.fn.selectpicker) {
+      $('.selectpicker').selectpicker('refresh');
+    }
+  }
+
+  // Default language
+  switchLanguage("en");
+
+  // Event listeners
+  enBtn.addEventListener("click", () => switchLanguage("en"));
+  arBtn.addEventListener("click", () => switchLanguage("ar"));
+</script>
+
 
    <script defer
       src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"

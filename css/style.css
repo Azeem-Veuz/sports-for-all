@@ -2443,7 +2443,7 @@ progress {
     display: block;
     width: 100%;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5;
     color: var(--bs-body-color);
@@ -2472,7 +2472,7 @@ progress {
 .form-control:focus {
     color: var(--bs-body-color);
     background-color: var(--bs-body-bg);
-    border-color: rgb(239.5, 249.5, 178);
+    border-color: rgb(216, 72, 5);
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(224, 244, 101, .25)
 }
@@ -3911,7 +3911,7 @@ fieldset:disabled .btn {
     white-space: nowrap
 }
 
-.dropdown-toggle:after {
+/* .dropdown-toggle:after {
     display: inline-block;
     margin-left: .255em;
     vertical-align: .255em;
@@ -3920,7 +3920,7 @@ fieldset:disabled .btn {
     border-right: .3em solid transparent;
     border-bottom: 0;
     border-left: .3em solid transparent
-}
+} */
 
 .dropdown-toggle:empty:after {
     margin-left: 0
@@ -4100,7 +4100,7 @@ fieldset:disabled .btn {
     margin-bottom: var(--bs-dropdown-spacer)
 }
 
-.dropup .dropdown-toggle:after {
+/* .dropup .dropdown-toggle:after {
     display: inline-block;
     margin-left: .255em;
     vertical-align: .255em;
@@ -4109,7 +4109,7 @@ fieldset:disabled .btn {
     border-right: .3em solid transparent;
     border-bottom: .3em solid;
     border-left: .3em solid transparent
-}
+} */
 
 .dropup .dropdown-toggle:empty:after {
     margin-left: 0
@@ -14105,7 +14105,7 @@ input,
 textarea {
     color: #696969;
     width: 100%;
-    padding: 16px 20px;
+    padding: 16px 30px;
     border: 1px solid #e8e8e8;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -19412,3 +19412,71 @@ form.form.checkout-form input[type=checkbox] {
     padding: 70px 0 !important;
 }
 
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default, .btn-default.focus, .btn-default:focus {
+    color: #333;
+    background: none !important;
+    background-image: none;
+    border: none !important;
+}
+.bootstrap-select .dropdown-menu li a span.text {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.checkbox label{
+    justify-content: start;
+    gap: 5px;
+    align-items: center;
+}
+
+.checkbox label input{
+    width: 20px;
+}
+
+.checkbox label p{
+    margin-bottom: 0;
+}
+
+
+/* toggle */
+
+ body { direction: ltr; }
+    body.rtl { direction: rtl; text-align: right;overflow-x: hidden !important; }
+
+    /* Vertical Language Switcher */
+    .lang-toggle {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .lang-toggle .btn {
+      border: none;
+      border-radius: 0;
+      padding: 10px 15px;
+      background: #f1f1f1;
+      color: #333;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .lang-toggle .btn.active {
+      background: #0d6efd;
+      color: #fff;
+    }
+
+    .account-form {
+      padding: 30px;
+    }
+
+    body.rtl .bootstrap-select .dropdown-toggle .caret{
+        left: 12px !important;
+        right: inherit;
+    }
+
+    body.rtl .bootstrap-select .dropdown-toggle .filter-option-inner-inner{
+        text-align: right !important;
+    }

@@ -42,74 +42,74 @@
 <body>
 
   
-  <div class="demo-wrapper">
+  <div class="demo-wrapper row">
     <h3>Registration Form</h3>
     <form id="regForm" class="form-horizontal">
 
       <!-- Full name -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Full name</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Full name</label>
+        
           <input type="text" class="form-control" maxlength="30" required>
-        </div>
+        
       </div>
 
       <!-- ID number -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">ID number</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">ID number</label>
+        
           <input type="text" class="form-control" maxlength="15" required>
-        </div>
+        
       </div>
 
       <!-- Date of Birth -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Date of Birth</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Date of Birth</label>
+        
           <input type="text" id="dob" class="form-control" placeholder="YYYY-MM-DD" required>
           <p class="help-block">Age: <strong id="ageDisplay">-</strong></p>
-        </div>
+        
       </div>
 
       <!-- Gender -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Gender</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Gender</label>
+        
           <select class="selectpicker form-control" title="Select gender" required>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
-        </div>
+        
       </div>
 
       <!-- Email -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Email</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Email</label>
+        
           <input type="email" class="form-control" required>
-        </div>
+       
       </div>
 
       <!-- Phone number -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Phone number</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Phone number</label>
+        
           <input id="phone" type="tel" class="form-control" required>
-        </div>
+        
       </div>
 
       <!-- Guardian phone number -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Guardian phone</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Guardian phone</label>
+       
           <input id="guardianPhone" type="tel" class="form-control" required>
-        </div>
+        
       </div>
 
       <!-- Nationality -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Nationality</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Nationality</label>
+        <div class="">
           <select id="nationality"
                   class="selectpicker countrypicker form-control"
                   data-live-search="true"
@@ -121,34 +121,34 @@
       </div>
 
       <!-- City -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">City</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">City</label>
+        
           <select class="selectpicker form-control" title="Select city" required>
             <option value="Riyadh" selected>Riyadh</option>
             <option value="Jeddah">Jeddah</option>
             <option value="Dammam">Dammam</option>
           </select>
-        </div>
+        
       </div>
 
       <!-- Club -->
-      <div class="form-group">
-        <label class="col-sm-3 control-label">Club</label>
-        <div class="col-sm-9">
+      <div class="form-group col-12">
+        <label class="control-label">Club</label>
+        
           <select class="selectpicker form-control" title="Select club" required>
             <option disabled>-- To be shared later --</option>
           </select>
-        </div>
+        
       </div>
 
       <!-- Terms and conditions -->
       <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
+        <div class="col-12">
           <div class="checkbox">
-            <label>
+            <label class="d-flex">
               <input type="checkbox" id="termsChk" required>
-              Please read and accept the Terms and conditions
+              <p>Please read and accept the Terms and conditions</p>
             </label>
             <br>
             <button type="button" class="btn btn-link" data-toggle="modal" data-target="#termsModal">
